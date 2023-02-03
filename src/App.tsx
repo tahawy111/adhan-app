@@ -110,6 +110,8 @@ const App: React.FC = () => {
     await AdMob.showBanner(options);
   };
 
+  console.log("trying to add ads");
+
   return (
     <IonApp>
       <IonHeader>
