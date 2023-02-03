@@ -1,21 +1,13 @@
 import {
   IonApp,
-  IonButton,
   IonContent,
   IonFooter,
   IonHeader,
   IonTitle,
   IonToolbar,
-  isPlatform,
   setupIonicReact,
 } from "@ionic/react";
 import "./App.css";
-import {
-  AdMob,
-  BannerAdOptions,
-  BannerAdPosition,
-  BannerAdSize,
-} from "@capacitor-community/admob";
 
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
@@ -34,7 +26,7 @@ import "@ionic/react/css/flex-utils.css";
 import "@ionic/react/css/display.css";
 
 import PrayDates from "./components/PrayDates";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 setupIonicReact();
 const App: React.FC = () => {
@@ -78,39 +70,6 @@ const App: React.FC = () => {
   const copticDay = parseInt(copticDate.split("/")[0]);
   const copticMonth = parseInt(copticDate.split("/")[1]);
   const copticYear = parseInt(copticDate.split("/")[2]);
-
-  useEffect(() => {
-    const asyncFunc = async () => {
-      const { status } = await AdMob.trackingAuthorizationStatus();
-      if (status === "notDetermined") {
-        console.log("Display information before ads load first time");
-      }
-
-      AdMob.initialize({
-        requestTrackingAuthorization: true,
-        testingDevices: ["Pixel API 31"],
-        initializeForTesting: true,
-      });
-    };
-    asyncFunc();
-  });
-  const showBanner = async () => {
-    const adId = isPlatform("ios")
-      ? "ca-app-pub-3802151240515348~9440455297"
-      : "ca-app-pub-3802151240515348/2525361455";
-
-    const options: BannerAdOptions = {
-      adId,
-      adSize: BannerAdSize.ADAPTIVE_BANNER,
-      position: BannerAdPosition.BOTTOM_CENTER,
-      margin: 0,
-      isTesting: true,
-    };
-
-    await AdMob.showBanner(options);
-  };
-
-  console.log("trying to add ads");
 
   return (
     <IonApp>
