@@ -33,3 +33,18 @@
   border: 1px solid black;
   line-height: 1.3;
 }
+
+@media (max-width:375px) {
+  .dates{
+    font-size: 11px;
+  }
+  .pray-table {
+    font-size: 12px;
+  }
+}
+
+@media (max-width:305px) {
+  .pray-table {
+    font-size: 10px;
+  }
+}
