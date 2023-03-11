@@ -125,13 +125,15 @@ const App: React.FC = () => {
               {mainDate.getDate().toLocaleString("ar-eg")}
             </div>
             <div>{monthList[mainDate.getMonth()].ar}</div>
-            <div style={{ marginTop: "0.7em" }}>
+            <div className="mt-2">
               {mainDate.getFullYear().toLocaleString("ar-eg").replace("٬", "")}
             </div>
           </div>
         </div>
+        <div className="d-flex justify-content-center">
 
-        <PrayDates date={mainDate} />
+          <PrayDates date={mainDate} />
+        </div>
       </IonContent>
       <IonFooter>
         <IonToolbar className="text-center fst-italic">
