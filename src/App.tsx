@@ -130,7 +130,7 @@ const App: React.FC = () => {
           </div>
         </div>
 
-        <PrayDates date={mainDate} />
+        <div className="d-flex justify-content-center"><PrayDates date={mainDate} /></div>
       </IonContent>
       <IonFooter>
         <IonToolbar className="text-center fst-italic">
