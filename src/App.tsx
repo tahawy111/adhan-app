@@ -104,7 +104,7 @@ const App: React.FC = () => {
             </div>
           </div>
           <div className="center d-flex flex-column justify-content-center fw-bold">
-            <div className="fs-4">{daysList[mainDate.getDay()].ar}</div>
+            <div className="fs-4 mt-1">{daysList[mainDate.getDay()].ar}</div>
             <div className="fs-6">
               {daysList[mainDate.getDay()].en.toUpperCase()}
             </div>
