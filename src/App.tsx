@@ -93,7 +93,6 @@ const App: React.FC = () => {
             className="form-control"
           />
         </div>
-
         <div className="dates border border-3 border-dark rounded-3 d-flex justify-content-between text-center">
           <div className="left d-flex flex-column justify-content-center fw-bold">
             <div className="fs-1">
