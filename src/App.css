@@ -13,31 +13,38 @@
 
 .dates {
   width: 100%;
-  height: 150px;
+  /* height: 150px; */
 }
 .dates .left {
   width: 33%;
   border: 1px solid black;
-  line-height: 1.3;
+  line-height: 1.3;font-size: 1.8rem;
 }
 
 .dates .center {
   width: 33%;
   border: 1px solid black;
-  line-height: 1.2;
+  line-height: 1.2;  font-size: 1.8rem;
 }
 
 .dates .right {
+  font-size: 1.8rem;
   width: 33%;
   border: 1px solid black;
   line-height: 1.3;
 }
-
-.fs-lg {
-  font-size: 60px;
+.App {
+  font-size: 16px;
 }
 
-table {
-  text-align: center;
-  vertical-align: middle;
+@media (max-width:475px) {
+  .App {
+    font-size: 10px;
+  }
 }
+@media (max-width:290px) {
+  .App {
+    font-size: 9px;
+  }
+}
+
