@@ -1,7 +1,7 @@
 import { CapacitorConfig } from "@capacitor/cli";
 
 const config: CapacitorConfig = {
-  appId: "io.ionic.starter",
+  appId: "calendar.tahawy.com",
   appName: "بلوك النتيجة ببلاش",
   webDir: "build",
   bundledWebRuntime: false,
