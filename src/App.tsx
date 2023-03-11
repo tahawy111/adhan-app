@@ -80,7 +80,7 @@ const App: React.FC = () => {
           </IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent className="App ion-padding">
+      <IonContent className="ion-padding">
         <div dir="rtl" className="mb-3 d-flex">
           <label htmlFor="dateInput" className="form-label">
             أدخل التاريخ الذي تريد الانتقال إليه
@@ -95,45 +95,43 @@ const App: React.FC = () => {
         </div>
 
         <div className="dates border border-3 border-dark rounded-3 d-flex justify-content-between text-center">
-          <div style={{ fontSize: "1.7em" }} className="left d-flex flex-column justify-content-center fw-bold">
-            <div>
+          <div className="left d-flex flex-column justify-content-center fw-bold">
+            <div className="fs-1">
               {hijriDay.toLocaleString("ar-eg").replace("٬", "")}
             </div>
-            <div>{monthList[hijriMonth - 1].hijri}</div>
-            <div className="mt-2">
+            <div className="fs-4">{monthList[hijriMonth - 1].hijri}</div>
+            <div className="fs-3 mt-2">
               {hijriYear.toLocaleString("ar-eg").replace("٬", "")}
             </div>
           </div>
-          <div style={{ fontSize: "1.3em" }} className="center d-flex flex-column justify-content-center fw-bold">
-            <div>{daysList[mainDate.getDay()].ar}</div>
-            <div >
+          <div className="center d-flex flex-column justify-content-center fw-bold">
+            <div className="fs-4">{daysList[mainDate.getDay()].ar}</div>
+            <div className="fs-6">
               {daysList[mainDate.getDay()].en.toUpperCase()}
             </div>
-            <div>{mainDate.getDate()}</div>
-            <div>
+            <div className="fs-4">{mainDate.getDate()}</div>
+            <div className="fs-6">
               {monthList[mainDate.getMonth()].en.toUpperCase() + " "}
               {mainDate.getFullYear()}
             </div>
-            <div style={{ fontSize: "1em" }} className="border-2 border-dark border-top p-1 d-flex justify-content-center">
+            <div className="border-2 border-dark border-top p-1 d-flex justify-content-center fs-6">
               {copticDay.toLocaleString("ar-eg").replace("٬", "") + " "}
               {monthList[copticMonth - 1].coptic + " "}
               {copticYear.toLocaleString("ar-eg").replace("٬", "")}
             </div>
           </div>
-          <div style={{ fontSize: "1.8em" }} className="right d-flex flex-column justify-content-center fw-bold">
-            <div>
+          <div className="right d-flex flex-column justify-content-center fw-bold">
+            <div className="fs-1">
               {mainDate.getDate().toLocaleString("ar-eg")}
             </div>
-            <div>{monthList[mainDate.getMonth()].ar}</div>
-            <div className="mt-2">
+            <div className="fs-2">{monthList[mainDate.getMonth()].ar}</div>
+            <div className="fs-3 mt-2">
               {mainDate.getFullYear().toLocaleString("ar-eg").replace("٬", "")}
             </div>
           </div>
         </div>
-        <div className="d-flex justify-content-center">
 
-          <PrayDates date={mainDate} />
-        </div>
+        <PrayDates date={mainDate} />
       </IonContent>
       <IonFooter>
         <IonToolbar className="text-center fst-italic">
